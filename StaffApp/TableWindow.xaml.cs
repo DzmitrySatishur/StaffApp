@@ -52,6 +52,11 @@ namespace StaffApp
 
             dataGrid.ItemsSource = result;
         }
+
+        private void Button_Delete_OnClick(object sender, RoutedEventArgs e)
+        {
+            dataGrid.Items.Remove(dataGrid.SelectedItem);
+        }
     }
 }
 

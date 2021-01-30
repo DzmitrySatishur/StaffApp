@@ -10,7 +10,7 @@
     <Grid>
         <DataGrid Margin="0,0,100,0" AutoGenerateColumns="False" x:Name ="dataGrid" ItemsSource="{Binding Employees}" SelectedItem="{Binding SelectedEmployee}" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="№"  Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Header="№" IsReadOnly="True" Binding="{Binding Path=Id}"/>
                 <DataGridTextColumn Header="Name" IsReadOnly="True" Binding="{Binding Path=Name}"/>
                 <DataGridTextColumn Header="Age" IsReadOnly="True" Width = "60" Binding="{Binding Path=Age}"/>
                 <DataGridTextColumn Header="Position" IsReadOnly="True" Binding="{Binding Path=Position}"/>
@@ -21,6 +21,7 @@
 
         <StackPanel HorizontalAlignment="Right" Width="100" >
             <Button Content="Load file" Click="Button_Load_OnClick" Background="Green"/>
+            <Button Content="Delete" Click="Button_Delete_OnClick" Background="Green"/>
         </StackPanel>
     </Grid>
 </Window>
